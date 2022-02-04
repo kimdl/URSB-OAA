@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/urslogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/style.css">    
+    
+    <title>Colleges URS Binangonan</title>
+</head>
+<body>
+    <header class="header">
+        <div class="overlay has-fade"></div>
+    
+        <nav class="container container--pall flex flex-jc-sb flex-ai-c">
+            <a href="/" class="header__logo">
+              <img src="images/urslogo.png" alt="URS Logo" />
+            </a>
+    
+            <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+    
+            <div class="header__links hide-for-mobile">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="admission.html">Admission</a>
+              <a href="colleges.html">Colleges</a>
+              <a href="students.html">Students</a>
+            </div>
+            
+            <a href="#" class="button header__cta hide-for-mobile">Enroll Now</a>
+        </nav>
+    
+        <div class="header__menu has-fade">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="admission.html">Admission</a>
+          <a href="colleges.html">Colleges</a>
+          <a href="students.html">Students</a>
+        </div>
+    
+      </header>
+
+        
+    <section class="signup">
+        <div class="container">
+            <div class="hero__image"></div>
+            
+            <div class="signup__text">
+                <div class="signup__container" >           
+            
+                <form class="signup__form" action="includes/signup.inc.php" method="post">
+                    <div class="signup__texts">
+                        <h2>SIGN UP</h2>
+                        <h3>for admission officers</h3>
+                    </div>
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="Full Name..."><br>
+                    <label>Email</label>
+                    <input type="text" name="email" placeholder="Email..."><br>
+                    <label>Username</label>
+                    <input type="text" name="uid" placeholder="Username..."><br>
+                    <label>Password</label>
+                    <input type="password" name="pwd" placeholder="Password..."><br>
+                    <label>Repeat Password</label>
+                    <input type="password" name="pwdrepeat" placeholder=" Repeat Password..."><br><br>
+                    <button type="submit" name="submit">Sign Up</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <script src="/app/js/script.js"></script>
+
+</body>
+</html>

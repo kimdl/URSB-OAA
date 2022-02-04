@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/urslogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/style.css">    
+    
+    <title>Applicant | URS Binangonan</title>
+
+</head>
+<body>
+    <header class="adminpage">
+      <div class="adminpage__container container container--pall">
+        <a href="/" class="adminpage__logo">
+          <img src="images/urslogo.png" alt="URS Logo" />
+        </a>
+        <a href="/" class="adminpage__adminlogo">
+          <img src="images/ursadminicon.png" alt="URS Logo" />
+        </a>
+
+      <h2><br>Applicant 0001</h2>
+    </header>
+
+    
+    <section class="adminpage__applicants">
+     
+      <div class="adminpage__container container container--pall">
+        <h1>Please Check Applicants Requirements</h1>
+        </div>
+
+      <div class="adminpage__tableapplicants">
+
+          <div class="adminpage__applicantbutton">
+            <div class="adminpage__allapp">
+              <a href="applicant.html">
+              <button> All Applicants </button>
+              </a>
+              <br>
+            </div>
+            <div class="adminpage__pending">
+              <button>Pending</button><br>
+            </div>
+            <div class="adminpage__complete">
+              <button>Complete</button><br>
+            </div>
+            <div class="adminpage__passed">
+              <button>Passed</button><br>
+            </div>
+
+            <div class="dropdown adminpage__course ">
+              <button class="dropbtn">Course</button>
+              <div class="dropdown-content">
+                <a href="#">BSBA</a>
+                <a href="#">BSIT</a>
+                <a href="#">BSIS</a>
+              </div>
+            </div>
+
+          
+    
+            <div class="adminpage__edit">
+              <button>Edit</button><br>
+            </div>
+
+            <div class="adminpage__help">
+              <button>Help</button><br>
+            </div>
+
+          </div>
+
+
+          <section class="applicant">
+            <div class="applicant__content container container--pall">
+    
+                <div class="applicant__forms">
+                        <div class="appform__grid">
+    
+                          <div class="appform__item">
+                            <form class="appform__urslogo">
+    
+                              <div class="appform__intro">
+                                <img src="/images/urslogo.png" alt="urs" >
+                                <img src="/images/ursgiants.png" alt="urs" >
+    
+                                <p>UNIVERSITY OF RIZAL SYSTEM 
+                                  <br> 
+                                    Province of Rizal
+                                  <br>
+                                    Website: www.urs.edu.ph
+                                </p>
+                                <h3>
+                                  URS APPLICATION FORM FOR <br>COLLEGE ADMISSION
+                                </h3>
+                                
+                                  <p>TO THE STUDENT AND PARENTS:<br>
+                                    Carefully read the instructions before filling out the application form.<br>
+                                    Print nearly all information required. Only accomplished application forms, 
+                                    (URS College Admission Form) will be processed.
+                                  </p>
+                              </div>
+                              
+                            </form>
+                          </div>
+        
+                          <div class="appform__item">
+                            <form class="applicant__ursadmin">
+                              <fieldset>
+                              <div class="appform__admissiongrid">
+    
+                                <div class="appform__admissionchoice" >
+    
+                                  <p>
+                                    TO BE FILLED OUT ONLY BY THE ADMISSION OFFICER AND/OR AUTHORIZED PERSONNEL TO RECEIVE AND/OR PROCESS APPLICATION <br>
+                                  </p>
+                                </div>
+        
+                                <div class="appform__admissionchoice" >
+                                  <br>
+                                  <label>APPLICATION NUMBER </label>
+                                  <input type="text" name="hshname" placeholder="auto-generate" required>
+                                </div>
+                              </div>
+    
+                              <label for="formtc">TESTING CENTER: </label>
+                              <select name="testingcenter" id="formtc" required>
+                                <option value="" disabled selected hidden>Choose Center..</option>
+                                <option value="gas">URS ANGONO</option>
+                                <option value="stem">URS ANTIPOLO</option>
+                                <option value="hms">URS BINANGONAN</option>
+                                <option value="ict">URS CAINTA</option>
+                                <option value="agr">URS CARDONA</option>
+                                <option value="ia">URS MORONG</option>
+                                <option value="agr">URS PILILLA</option>
+                                <option value="ia">URS RODRIGUEZ</option>
+                                <option value="agr">URS TANAY</option>
+                                <option value="ia">URS TAYTAY</option>
+                              </select>
+                              <br><br>
+                  
+                              <div class="appform__admissiongrid1">
+                                
+                                <label>DOCUMENTS/ REQUIREMENTS SUBMITTED: </label><br>
+                              <div class="appform__admissionchoice1" >
+                                <input type="checkbox" id="3photos" name="photos" value="Three Photos">
+                                <label for="3photos"> 3 PHOTOS</label><br>
+                                <input type="checkbox" id="form137" name="photos" value="Three Photos">
+                                <label for="form137"> FORM 137</label><br>
+                                <input type="checkbox" id="cert" name="cert" value="Three Photos">
+                                <label for="cert"> CEDP CERTIFICATE</label><br>
+                              </div>
+      
+                              <div class="appform__admissionchoice1" >
+                                <input type="checkbox" id="3photos" name="photos" value="Three Photos">
+                                <label for="3photos"> PEPT</label><br>
+                                <input type="checkbox" id="form137" name="photos" value="Three Photos">
+                                <label for="form137"> GOOD MORAL</label><br>
+                                <input type="checkbox" id="cert" name="bcert" value="bcer">
+                                <label for="bcert"> BIRTH CERTIFICATE</label><br>
+                             
+                              </div>
+                              </div>
+                              </fieldset>
+                            </form>
+                          </div>
+                        </div>
+    
+                      <div class="appform__item" >
+                        <form class="appform__personal">
+    
+                            <div class="appform__photo container">
+                              <label for="photo">Photo</label>
+                              <input type="file" id="photo" size="60">
+                              <p>Upload 2" X 2" ID Picture(taken within the last three months)</p>
+                            </div>
+    
+                          1. NAME OF STUDENT-APPLICANT<br>
+                          <br>
+                        <label>LAST NAME:</label>
+                        <input type="text" name="lname" placeholder=" Surname" required>
+                        <br>
+                        <label>FIRST NAME: </label>
+                        <input type="text" name="fname" placeholder=" First Name" required>
+                        <br>
+                        <label>MIDDLE NAME:</label>
+                        <input type="text" name="mname" placeholder=" Middle Name" required>
+                        <br>
+                        <br>
+    
+                        <label>2. GENDER</label>
+                        <select name="gender" id="formgender" required>
+                          <option value="" disabled selected hidden>Choose Gender...</option>
+                          <option value="fem">FEMALE</option>
+                          <option value="male">MALE</option>
+                        </select>
+                        <br>
+    
+                        <label>3. RELIGION</label>
+                        <select name="religion" id="formrel" required>
+                          <option value="" disabled selected hidden>Choose Religion...</option>
+                          <option value="rc">ROMAN CATHOLIC</option>
+                          <option value="ba">BORN AGAIN</option>
+                          <option value="inc">IGLESIA NI CRISTO</option>
+                          <option value="ba">CHRISTIAN</option>
+                        </select>
+                        <br><br>
+                        <label>4. DATE OF BIRTH </label>
+      <!--                   MONTH
+                        <select name="mos" id="formbdaymos">
+                          <option value="jan">JANUARY</option>
+                          <option value="feb">FEBRUARY</option>
+                          <option value="mar">MARCH</option>
+                          <option value="apr">APRIL</option>
+                          <option value="may">MAY</option>
+                          <option value="jun">JUNE</option>
+                          <option value="jul">JULY</option>
+                          <option value="aug">AUGUST</option>
+                          <option value="sep">SEPTEMBER</option>
+                          <option value="oct">OCTOBER</option>
+                          <option value="nov">NOVEMBER</option>
+                          <option value="dec">DECEMBER</option>
+                        </select>
+                        DAY -->
+                        <input type="date" id="birthday" name="formbirthday" placeholder="Month/Day/Year">
+                        <br>
+                        
+                        <label>AGE:</label>
+                        <input type="number" id="age" name="formage" placeholder=" Enter Current Age"><br>
+                        <label>CIVIL STATUS:</label>
+                        <select name="cs" id="formcs" required>
+                          <option value="" disabled selected hidden>Choose Civil Status...</option>
+                          <option value="s">SINGE</option>
+                          <option value="m">MARRIED</option>
+                          <option value="sp">SINGLE PARENT</option>
+                        </select>
+    
+                        <br><br>
+                        <label>5. PLACE OF BIRTH</label>
+                        <input type="text" name="place of birth" placeholder=" (City/Town/Province)" required>
+                        <br><br>
+                        <label>6. CITIZENSHIP</label>
+                        <select name="cship" id="formcship" required>
+                          <option value="" disabled selected hidden>Choose Citizenship...</option>
+                          <option value="fil">FILIPINO</option>
+                          <option value="nat">NATURAL BORN FILIPINO</option>
+                          <option value="for">FOREIGN(Specify)</option>
+                          <option value="dual">DUAL(Specify)</option>
+                        </select>
+                        <br><br>
+                        </form>
+                        </div>
+    
+                        <div class="appform__grid">
+    
+                      <div class="appform__item">
+                        <form class="appform__hsh">
+                          7. HIGH SCHOOL<br>
+                          <br>
+                        <label>HIGH SCHOOL NAME:</label>
+                        <input type="text" name="hshname" placeholder=" Do not Abbreviate" required>
+                        <br><br>
+                        <label>ADDRESS: </label>
+                        <textarea name="hshadd" id="hshaddress" cols="30" rows="3"></textarea>
+                        <br><br>
+                        <label>EXPECTED MONTH/YEAR OF COMPLETION: </label>
+                        <input type="text" name="hshEM" placeholder=" Month/Yr" required>
+                        <br>
+                        <label>ACADEMIC STRAND/TRACK: </label>
+                        <select name="academicstrand" id="formstrand" required>
+                          <option value="" disabled selected hidden>Choose Strand...</option>
+                          <option value="gas">GAS</option>
+                          <option value="stem">STEM</option>
+                          <option value="hms">HUMMS</option>
+                          <option value="ict">ICT</option>
+                          <option value="agr">ABM</option>
+                          <option value="ia">INDUSTRIAL ARTS</option>
+                        </select>
+                        <br>
+                        </form>
+                      </div>
+    
+                      <div class="appform__item">
+                        <form class="appform__urscampus">
+                          8. URS CAMPUS APPLIED FOR <br>
+                          <i>Do not include the same campus twice.</i> 
+                          <br>
+                          <br>
+                          <div class="appform__campusgrid">
+                            <div class="appform__campuschoice" >
+                              <label>URS CAMPUS:</label><br>
+                              <select name="firstURSchoice" id="form1camp" required>
+                                <option value="" disabled selected hidden>1st Choice</option>
+                                <option value="gas">URS ANGONO</option>
+                                <option value="stem">URS ANTIPOLO</option>
+                                <option value="hms">URS BINANGONAN</option>
+                                <option value="ict">URS CAINTA</option>
+                                <option value="agr">URS CARDONA</option>
+                                <option value="ia">URS MORONG</option>
+                                <option value="agr">URS PILILLA</option>
+                                <option value="ia">URS RODRIGUEZ</option>
+                                <option value="agr">URS TANAY</option>
+                                <option value="ia">URS TAYTAY</option>
+                              </select>
+                              
+                              <select name="secondURSchoice" id="form2camp" required>
+                                <option value="" disabled selected hidden>2nd Choice</option>
+                                <option value="gas">URS ANGONO</option>
+                                <option value="stem">URS ANTIPOLO</option>
+                                <option value="hms">URS BINANGONAN</option>
+                                <option value="ict">URS CAINTA</option>
+                                <option value="agr">URS CARDONA</option>
+                                <option value="ia">URS MORONG</option>
+                                <option value="agr">URS PILILLA</option>
+                                <option value="ia">URS RODRIGUEZ</option>
+                                <option value="agr">URS TANAY</option>
+                                <option value="ia">URS TAYTAY</option>
+                              </select>
+    
+                            </div>
+    
+                            <div class="appform__campuschoice" >
+                              <label>URS INTENDED COURSE:</label><br>
+                              <input type="text" name="hshname" placeholder=" 1st Choice" required>
+                              <input type="text" name="hshname" placeholder=" 2nd Choice" required>
+                            <br>
+                              <input type="text" name="hshname" placeholder=" 1st Choice" required>
+                              <input type="text" name="hshname" placeholder=" 2nd Choice" required>
+                            </div>
+                          </div>
+    
+                        <br>
+                        </form>
+                      </div>
+                        </div>
+    
+                        <div class="appform__item">
+                        <form class="appform__urscampusconnect">
+                          9. ARE YOU A CHILD OF A URS FACULTY OR EMPLOYEE?<br>
+                          <div class="appform__yesno">
+                          <input type="radio" id="yes" name="childyes" value="yes">
+                          <label for="yes">YES</label>
+                          <input type="radio" id="no" name="childno" value="no">
+                          <label for="no">NO</label><br>
+                          </div>
+                          
+                          <br>
+    
+                          <br>
+                          <div class="appform__campusconnectgrid">
+                            <div class="appform__campusconnectchoice" >
+    
+                              <label>Name of Parent Employed by URS:</label>
+                              <input type="text" name="empl">
+                              <br>
+                              <label>College/Office where Employed: </label>
+                              <input type="text" name="officeempl">
+                              <br><br>
+    
+    
+                              <label>
+                                10. PERMANENT ADDRESS
+                              </label><br><br>
+                              <label>NUMBER & STREET:</label>
+                              <input type="text">
+                              <label>SUBD/VILLAGE/BRGY:</label>
+                              <input type="text">
+                              <label>CITY/TOWN & PROVINCE:</label>
+                              <input type="text">
+                              <label>POSTAL CODE:</label>
+                              <input type="text">
+                              <label>EMAIL ADDRESS:</label>
+                              <input type="email" name="email" placeholder="abc@gmail.com">
+                              <label>FACEBOOK ACCOUNT:</label>
+                              <input type="text">
+                            </div>
+    
+                            <div class="appform__campusconnectchoice" >
+                              
+                              <label>Office Designation:</label>
+                              <input type="text" name="empl">
+                              <br>
+                              <label>Telephone No.</label>
+                              <input type="text" name="officeempl">
+                              <br><br>
+    
+                              <label>
+                                11. ARE YOU SELF-SUPPORTING?
+                              </label><br><br>
+                              <div class="appform__yesno">
+                              <input type="radio" id="yes" name="selfsupyes" value="yes" >
+                              <label for="yes">YES</label>
+                              <input type="radio" id="no" name="selfsupno" value="no" >
+                              <label for="no">NO</label><br>
+                              </div>
+                              <br>
+                              <select name="work" id="formwork" required>
+                                <option value="" disabled selected hidden>Select nature of work..</option>
+                                <option value="gas">FOOD CHAIN CREW</option>
+                                <option value="stem">VENDOR</option>
+                                <option value="hms">HOUSEHOLD</option>
+                                <option value="ict">GASOLINE BOY/GIRL</option>
+                                <option value="agr">MESSENGER</option>
+                                <option value="ia">CONSTRUCTION</option>
+                              </select>
+    
+                              <br><br>
+                              
+                              <label>OTHERS (please specify)</label>
+    
+                              <br>
+                              <input type="text">
+    
+                            </div>
+                          </div>
+                          <br>
+    
+                          12. SOCIO ECONOMIC 
+                          <p>Furnish all the required information on each family listed. 
+                          Write <i>DECEASED</i> after name of deceased family members. 
+                          Under the column 'Highest Educational Attainment', 
+                          indicate the educational level whick the household member actually completed
+                          (i.e. Grade II, Third Year High School, High School Graduate, Second Year College, BSE or Ph. D., Ed, D.)
+                          </p>
+                          <div class="container">
+                          <table>
+                            <th></th>
+                            <th>NAME</th>
+                            <th>CITIZENSHIP</th>
+                            <th>MARITAL STATUS</th>
+                            <th>HIGHEST EDUCATIONAL ATTAINMENT</th>
+                            <th>PRESENT OCCUPATION</th>
+                            <th>MONTHLY INCOME<br>(In Phil. Peso)</th>
+    
+                            <tr>
+                              <td>FATHER</td>
+                              <td> <input type="text" name="fname"> </td>
+                              <td> <input type="text" name="fcit"> </td>
+                              <td> <input type="text" name="fms"> </td>
+                              <td> <input type="text" name="fhea"> </td>
+                              <td> <input type="text" name="fpo"> </td>
+                              <td> <input type="text" name="fmi"> </td>
+                            </tr>
+    
+                            <tr>
+                              <td>MOTHER</td>
+                              <td> <input type="text" name="mname"> </td>
+                              <td> <input type="text" name="mcit"> </td>
+                              <td> <input type="text" name="mms"> </td>
+                              <td> <input type="text" name="mhea"> </td>
+                              <td> <input type="text" name="mpo"> </td>
+                              <td> <input type="text" name="mmi"> </td>
+                            </tr>
+    
+                            <tr>
+                              <td>LEGAL GUARDIAN</td>
+                              <td> <input type="text" name="lgname"> </td>
+                              <td> <input type="text" name="lgcit"> </td>
+                              <td> <input type="text" name="lgms"> </td>
+                              <td> <input type="text" name="lghea"> </td>
+                              <td> <input type="text" name="lgpo"> </td>
+                              <td> <input type="text" name="lgmi"> </td>
+                            </tr>
+                           </table>
+                          </div>
+                        </form>
+                        </div>
+    
+                    <br><br>
+                    This is to certify that all information given is true and correct. 
+                      <div class="appform__signature">
+                        <br>
+                        <input type="text"><br>
+                        <i>Signature over Printed Name of Applicant</i>
+                        <br>
+                      </div>
+                    <br><br>
+                </div>
+                
+            </div>
+
+            <br><br>
+
+        </section>
+        <div class="applicant__statusbutton">
+          <br>
+  
+          <label for="status">STATUS:</label><br>
+          <select name="status" id="status" required>
+            <option value="" disabled selected hidden>STATUS</option>
+            <option value="gas">COMPLETE</option>
+            <option value="stem">PENDING</option>
+          </select>
+          
+          <br>
+  
+          <label for="room">SCHEDULE EXAM:</label><br>
+          <select name="room" id="room" required>
+            <option value="" disabled selected hidden>ROOM AVAILABLE</option>
+            <option value="gas">ROOM 1</option>
+            <option value="stem">ROOM 2 </option>
+          </select>
+          <br><br>
+          
+            <a href="#" class="button">
+              GENERATE PDF
+            </a>
+  
+            <a href="#" class="button">
+              SEND SCHEDULE
+            </a>
+  
+        </div>
+
+      </div>
+      
+    </section>
+   
+
+    <footer class="footer">
+      <div class="container">
+          <a class="footer__logo" href="#">
+              <img src="/images/urslogo.png"/><br>
+              URS Binangonan
+  
+            </a>
+            <div class="footer__social">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><title>Facebook</title><path fill="#FFF" d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z"/></svg>
+              </a>
+              <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18"><title>Twitter</title><path fill="#FFF" d="M20.667 2.797a8.192 8.192 0 01-2.357.646 4.11 4.11 0 001.804-2.27 8.22 8.22 0 01-2.606.996A4.096 4.096 0 0014.513.873c-2.649 0-4.595 2.472-3.997 5.038a11.648 11.648 0 01-8.457-4.287 4.109 4.109 0 001.27 5.478A4.086 4.086 0 011.47 6.59c-.045 1.901 1.317 3.68 3.29 4.075a4.113 4.113 0 01-1.853.07 4.106 4.106 0 003.834 2.85 8.25 8.25 0 01-6.075 1.7 11.616 11.616 0 006.29 1.843c7.618 0 11.922-6.434 11.662-12.205a8.354 8.354 0 002.048-2.124z"/></svg>
+              </a>
+              <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"><title>Instagram</title><path fill="#FFF" d="M10.333 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.976 1.409 4.1 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.058 4.042-.124 2.687-1.386 3.975-4.099 4.099-1.055.048-1.37.058-4.042.058-2.67 0-2.986-.01-4.04-.058-2.717-.124-3.976-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zm0-1.802C7.618 0 7.278.012 6.211.06 2.579.227.56 2.242.394 5.877.345 6.944.334 7.284.334 10s.011 3.057.06 4.123c.166 3.632 2.181 5.65 5.816 5.817 1.068.048 1.408.06 4.123.06 2.716 0 3.057-.012 4.124-.06 3.628-.167 5.651-2.182 5.816-5.817.049-1.066.06-1.407.06-4.123s-.011-3.056-.06-4.122C20.11 2.249 18.093.228 14.458.06 13.39.01 13.049 0 10.333 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.339-9.87a1.2 1.2 0 10-.001 2.4 1.2 1.2 0 000-2.4z"/></svg>
+              </a>
+            </div>
+        
+            <div class="footer__links col1">
+              <a href="#">About Us</a>
+              <a href="#">Contact</a>
+              <a href="#">Blog</a>
+            </div>
+        
+            <div class="footer__links col2">
+              <a href="#">Careers</a>
+              <a href="#">Support</a>
+              <a href="#">Privacy Policy</a>
+            </div>
+        
+            <div class="footer__cta">
+              <a href="#" class="button">Home</a>
+            </div>
+        
+            <div class="footer__copyright">
+              &copy; University. All Rights Reserved.
+            </div>
+  
+      </div>    
+    </footer>
+
+  <script src="/app/js/script.js"></script>
+
+
+</body>
+</html>

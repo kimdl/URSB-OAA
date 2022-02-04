@@ -1,0 +1,85 @@
+.about {
+  
+    background-color: $lightGrayishBlue;
+    text-align: center;
+    // p{
+    //   color: $white;
+    // }
+  
+    @include breakpoint-up(medium){
+      text-align: center;
+      
+    }
+    &__w3-content {
+      position: relative;
+      float: right;
+      width: 40%;
+      align-items: right;
+      padding-left: 10px;
+      img{
+        width: 105%;
+        height: 50%;
+      }
+
+    }
+  
+    &__qualitypolicy {
+      margin-bottom: 3.75rem;
+      text-align: center;
+  
+      @include breakpoint-up(large){
+        width: 60%;
+      }
+    }
+  
+    &__grid {
+  
+      @include breakpoint-up(medium){
+        display: flex;
+        flex-wrap: wrap;     
+      }
+    }
+  
+    &__item {
+      padding: 0.9375rem;
+  
+      @include breakpoint-up(medium){
+        flex: 0 0 50%;
+      }
+  
+      @include breakpoint-up(large){
+        flex: 1;
+      }
+    }
+  
+    &__icon {
+      margin-bottom: 1.875rem;
+  
+      @include breakpoint-up(large){
+        margin-bottom: 2.75rem;
+      }    
+    }
+  
+    &__title {
+      font-size: 1.25rem;
+      font-weight: 300;
+      line-height: 1.15;
+      color: $darkBlue;
+      margin-bottom: 1rem;
+  
+      @include breakpoint-up(large){
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  
+    &__description {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+  }
+  
+  .mySlides {
+    display: none;
+    align-items: center;
+  }

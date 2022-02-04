@@ -1,0 +1,50 @@
+.admissionhero {
+
+
+  background-image: url(/images/ursbtoned.jpeg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100%;
+  background-size: 368%;
+  background-position: 40% 11%;
+  opacity: 1;
+
+      @include breakpoint-up(medium){
+        height: 70%;        
+        background-size: 100%;
+        background-position: 0% 2%;
+        opacity: 1;
+      }
+  h1{
+    color: $white;
+    margin-top: 30px;
+/*     @include breakpoint-up(large){
+      margin-top: 50px;
+      font-size: $font-med;
+    } */
+  }
+  p{
+    color: $white;
+  }
+  
+    .container {
+      @include breakpoint-up(large){    
+        display: flex;
+        align-items: center;
+        height: 23rem;
+      }
+    }
+
+  
+    &__text {
+      text-align: center;
+  
+      @include breakpoint-up(large){
+        flex: 2;
+        order: 1;
+        text-align: center;
+      }
+    }
+    
+  }
+  

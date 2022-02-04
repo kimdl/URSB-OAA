@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/urslogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/style.css">    
+    
+    <title>Application Form | URS Binangonan</title>
+
+</head>
+<body>
+    <header class="header">
+        <div class="overlay has-fade"></div>
+    
+        <nav class="container container--pall flex flex-jc-sb flex-ai-c">
+            <a href="/" class="header__logo">
+              <img src="images/urslogo.png" alt="URS Logo" />
+            </a>
+    
+            <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+    
+            <div class="header__links hide-for-mobile">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="admission.html">Admission</a>
+              <a href="colleges.html">Colleges</a>
+              <a href="students.html">Students</a>
+            </div>
+    
+
+            <a href="#" class="button header__cta hide-for-mobile" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Log In</a>
+          </nav>
+    
+        <div class="header__menu has-fade">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="admission.html">Admission</a>
+          <a href="colleges.html">Colleges</a>
+          <a href="students.html">Students</a>
+        </div>
+    
+      </header>
+
+        
+    <section class="admissionhero">
+        <div class="container">
+            <div class="admissionhero__text container--pall">
+            <h1>
+                Application Form
+            </h1>
+            <p class="admissionhero__paragraph">
+              <b>IMPORTANT NOTES:</b><br>
+              Please fill in all fields.<br>
+              Use your legal name as it appears on Birth Certificate.
+            </p>           
+            </div>
+        </div>
+    </section>
+
+    <section class="form">
+      <div class="form__content container container--pall">
+          <div class="form__forms">
+
+                <div class="form__item" >
+                  <div class="centeraligntext">
+                    <h3><span>APPLICANT PERSONAL INFORMATION</span></h3>
+                  </div>
+
+                  <form class="form__personal">
+
+                    <div class="form__photo container">
+                        <label for="photo">Photo</label>
+                        <form action='upload.php' method='POST' enctype='multipart/form-data'>
+                          <input type='file' name='file'>
+                          <button type='submit' name='submit'>UPLOAD</button>
+                        </form>
+                        
+                        <p>Upload ID Picture(taken within the last three months)</p>
+                    </div>
+                      
+                      1. NAME OF STUDENT-APPLICANT
+                      <br>
+                    <div class="form__namegrid">
+                      <div class="form__name">
+                        <label>LAST NAME:</label>
+                        <input type="text" name="lname" placeholder=" Last Name" required>
+                      </div>
+                      <div class="form__name">
+                        <label>FIRST NAME: </label>
+                        <input type="text" name="fname" placeholder=" First Name" required>
+                      </div>
+                      <div class="form__name">
+                        <label>MIDDLE NAME:</label>
+                        <input type="text" name="mname" placeholder=" Middle Name" required>
+                      </div>
+                    </div>
+
+                    <div class="form__namegrid">
+                      <div class="form__name">
+                        <label>2. GENDER</label>
+                        <select name="gender" id="formgender" required>
+                          <option value="" disabled selected hidden>Choose Gender...</option>
+                          <option value="female">FEMALE</option>
+                          <option value="male">MALE</option>
+                        </select>
+                      </div>
+
+                      <div class="form__name">
+                        <label>3. RELIGION</label>
+                        <select name="religion" id="formrel" required>
+                          <option value="" disabled selected hidden>Choose Religion...</option>
+                          <option value="romanCatholic">ROMAN CATHOLIC</option>
+                          <option value="bornAgain">BORN AGAIN</option>
+                          <option value="iglesiaNiCristo">IGLESIA NI CRISTO</option>
+                          <option value="christian">CHRISTIAN</option>
+                          <option value="r_others">OTHERS</option>
+                        </select>
+                      </div>
+
+                      <div class="form__name">
+                        <label>4. DATE OF BIRTH </label>
+                        <input type="date" name="birthday" placeholder="Month/Day/Year">
+                      </div>
+                      
+                      <div class="form__name">
+                        <label>AGE:</label>
+                        <input type="number" name="age" placeholder=" Enter Current Age"><br>
+                      </div>
+                    
+                      <div class="form__name">
+                        <label>CIVIL STATUS:</label>
+                        <select name="civilStatus" required>
+                        <option value="" disabled selected hidden>Choose Civil Status...</option>
+                        <option value="single">SINGLE</option>
+                        <option value="married">MARRIED</option>
+                        <option value="singleparent">SINGLE PARENT</option>
+                        <option value="cs_others">OTHERS</option>
+                        </select>
+                      </div>
+
+                      <div class="form__name">
+                      <label>5. PLACE OF BIRTH</label>
+                      <input type="text" name="placeOfBirth" placeholder=" (City/Town/Province)" required>
+                      </div>
+
+                      <div class="form__name">
+                        <label>6. CITIZENSHIP</label>
+                        <select name="citizenShip" onchange="yesnoCheck()" required>
+                          <option id="noCheck" value="" disabled selected hidden>Choose Citizenship...</option>
+                          <option id="noCheck"value="fil">FILIPINO</option>
+                          <option id="noCheck" value="natbornfil">NATURAL BORN FILIPINO</option>
+                          <option id="foreignCheck" value="foreign">FOREIGN(Specify)</option>
+                          <option id="dualCheck" value="dual">DUAL</option>
+                          <option id="otherCheck" value="c_other">OTHERS</option>
+                        </select>
+                        
+                        <div id="ifYes" style="display: none;">
+                        <label for="csSpecify">Please specify.</label> 
+                        <input type="text" id="dualspecify" name="csSpecify"/>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="form__item">
+                  <div class="centeraligntext">
+                    <h3><span>EDUCATIONAL BACKGROUND</span></h3>
+                  </div>
+
+                  <form class="form__hsh">
+                    7. HIGH SCHOOL
+                    <br>
+                    <div class="form__hshgrid">
+                      <div class="form__high">
+                        <div class="high__highschool">
+                          <label>HIGH SCHOOL NAME:</label>
+                          <input type="text" name="hsname" placeholder=" Do not Abbreviate" required>
+                        </div>
+                        <div class="high__highschool">
+                          <label>ADDRESS: </label>
+                          <input type="text" name="hsadd" id="hshaddress">
+                        </div>
+                      </div>
+                      <div class="form__high">
+                        <div class="high__highschool">
+                          <label>EXPECTED MONTH/YEAR OF COMPLETION: </label>
+                          <input type="text" name="hsEM" placeholder=" Month/Yr" required>
+                        </div>
+                        <div class="high__highschool">
+                          <label>ACADEMIC STRAND/TRACK: </label>
+                          <select name="academicstrand" id="formstrand" required>
+                            <option value="" disabled selected hidden>Choose Strand...</option>
+                            <option value="gas">GAS</option>
+                            <option value="stem">STEM</option>
+                            <option value="hms">HUMMS</option>
+                            <option value="ict">ICT</option>
+                            <option value="agr">ABM</option>
+                            <option value="ia">INDUSTRIAL ARTS</option>
+                            <option value="acad_others">OTHERS</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="form__item">
+                  <div class="centeraligntext">
+                    <h3><span>COURSE CHOICE</span></h3>
+                  </div>
+
+                  <form class="form__urscampus">
+                    8. URS CAMPUS APPLIED FOR
+                    <br>
+                    <i>Do not include the same campus twice.</i> 
+                    <br>
+                    <br>
+                    <div class="form__campusgrid">
+                      <div class="form__campuschoice" >
+                        <label>URS CAMPUS:</label><br>
+                        <select name="firstURSchoice" id="form1camp" required>
+                          <option value="" disabled selected hidden>1st Choice</option>
+                          <option value="gas">URS ANGONO</option>
+                          <option value="stem">URS ANTIPOLO</option>
+                          <option value="hms">URS BINANGONAN</option>
+                          <option value="ict">URS CAINTA</option>
+                          <option value="agr">URS CARDONA</option>
+                          <option value="ia">URS MORONG</option>
+                          <option value="agr">URS PILILLA</option>
+                          <option value="ia">URS RODRIGUEZ</option>
+                          <option value="agr">URS TANAY</option>
+                          <option value="ia">URS TAYTAY</option>
+                          <option value="none">NONE</option>
+                        </select>
+                        
+                        <select name="secondURSchoice" id="form2camp" required>
+                          <option value="" disabled selected hidden>2nd Choice</option>
+                          <option value="gas">URS ANGONO</option>
+                          <option value="stem">URS ANTIPOLO</option>
+                          <option value="hms">URS BINANGONAN</option>
+                          <option value="ict">URS CAINTA</option>
+                          <option value="agr">URS CARDONA</option>
+                          <option value="ia">URS MORONG</option>
+                          <option value="agr">URS PILILLA</option>
+                          <option value="ia">URS RODRIGUEZ</option>
+                          <option value="agr">URS TANAY</option>
+                          <option value="ia">URS TAYTAY</option>
+                          <option value="none">NONE</option>
+                        </select>
+                      </div>
+
+                      <div class="form__campuschoice" >
+                        <label>URS INTENDED COURSE:</label><br>
+                        <input type="text" name="ifirstIC" placeholder=" 1st Choice" required>
+                        <input type="text" name="isecondIC" placeholder=" 2nd Choice" required>
+                      <br>
+                        <input type="text" name="iifirstIC" placeholder=" 1st Choice" required>
+                        <input type="text" name="iisecondIC" placeholder=" 2nd Choice" required>
+                      </div>
+                        
+                      <div class="genAverage">
+                        General Average:
+                        <input type="text" name="genAverage" placeholder="Average" required>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="form__item">
+                  <div class="centeraligntext">
+                    <h3><span>FAMILY BACKGROUND</span></h3>
+                  </div>
+
+                  <form class="form__urscampusconnect">
+                    9. ARE YOU A CHILD OF A URS FACULTY OR EMPLOYEE?
+                    <div class="form__yesno"  onchange="childCheck()">
+                    <input type="radio" id="yesChild" name="facultyChild" value="yes" >
+                    <label for="yes">YES</label>
+                    <input type="radio" id="noChild" name="facultyChild" value="no">
+                    <label for="no">NO</label><br>
+                    </div>
+
+                    <div class="form__campusconnectgrid">
+                      <div class="form__campusconnectchoice" >
+                        <div id="ifChild" class="form__parentEmp">
+                          <label>Name of Parent Employed by URS:</label>
+                          <input type="text" name="parentEmpName"  disabled>
+                          <br>
+                          <label>College/Office where Employed: </label>
+                          <input type="text" name="officeEmp"  disabled>
+                        </div>
+                      </div>  
+                      <div class="form__campusconnectchoice" >
+                        <div id="ifChildd">
+                          <label>Office Designation:</label>
+                          <input type="text" name="parentOfficeDesig"  disabled>
+                          <br>
+                          <label>Telephone No.</label>
+                          <input type="text" name="parentTelNo"  disabled>
+                          <br><br>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="form__item">
+                  <div class="centeraligntext">
+                    <h3><span>CONTACT DETAILS</span></h3>
+                  </div>
+                
+                  <label>10. PERMANENT ADDRESS</label><br>
+
+                  <div class="form__namegrid">
+                      
+                      <div class="form__name">
+                        <label>NUMBER & STREET:</label>
+                        <input type="text" name="numAndStreet">
+                      </div>
+
+                      <div class="form__name">
+                        <label>SUBD/VILLAGE/BRGY:</label>
+                        <input type="text" name="subdBrgy">
+                      </div>
+
+                      <div class="form__name">
+                        <label>CITY/TOWN & PROVINCE:</label>
+                        <input type="text" name="cityProvince">
+                      </div>
+                      
+                      <div class="form__name">
+                        <label>POSTAL CODE:</label>
+                        <input type="text" name="postalCode">
+                      </div>
+                      
+                      <div class="form__name">
+                        <label>TELEPHONE NO.:</label>
+                        <input type="text" name="telNumber">
+                      </div>
+
+                      <div class="form__name">
+                        <label>EMAIL ADDRESS:</label>
+                        <input type="email" name="emailAddress" placeholder="abc@gmail.com">
+                      </div>
+
+                      <div class="form__name">
+                        <label>FACEBOOK ACCOUNT:</label>
+                        <input type="text" name="fbAccount">
+                      </div>
+
+                    </div>
+                </div>
+
+                <div class="form__item">
+                  <div class="centeraligntext">
+                    <h3><span>WORKING STUDENT</span></h3>
+                  </div>
+
+                  <div class="form__namegrid">
+                    <div class="form__name">
+                      
+                  <label>11. ARE YOU SELF-SUPPORTING?</label>
+                      <div class="form__yesno">
+                        <input type="radio" id="yes" name="selfSup" value="yes" >
+                        <label for="yes">YES</label>
+                        <input type="radio" id="no" name="selfSup" value="no" >
+                        <label for="no">NO</label><br>
+                      </div>
+                    </div>
+                    <div class="form__name">
+                      <label>NATURE OF WORK:</label>
+                      <select name="natureOfWork" id="formwork" onchange="yesnoSelfSup()">
+                        <option id="SelfSup" value="" disabled selected hidden>Select nature of work..</option>
+                        <option id="SelfSup" value="gas">FOOD CHAIN CREW</option>
+                        <option id="SelfSup" value="stem">VENDOR</option>
+                        <option id="SelfSup" value="hms">HOUSEHOLD</option>
+                        <option id="SelfSup" value="ict">GASOLINE BOY/GIRL</option>
+                        <option id="SelfSup" value="agr">MESSENGER</option>
+                        <option id="SelfSup" value="ia">CONSTRUCTION</option>
+                        <option id="yesSelfSup" value="w_others">OTHERS</option>
+                      </select>
+                    </div>
+                    <div class="form__name">
+                      <div id="ifSelfSup"  style="display: none;">
+                      <label>Please specify:</label>
+                      <input type="text" name="workSpecify">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+
+                <div class="form__item">
+                  <div class="centeraligntext">
+                    <h3><span>OTHER INFORMATION</span></h3>
+                  </div>
+                
+                  12. SOCIO ECONOMIC 
+                  <div class="form__urscampuconnect"></div>
+                  <p>Furnish all the required information on each family listed. 
+                  Write <i>DECEASED</i> after name of deceased family members. 
+                  Under the column "Highest Educational Attainment", 
+                  indicate the educational level whick the household member actually completed
+                  (i.e. Grade II, Third Year High School, High School Graduate, Second Year College, BSE or Ph. D., Ed, D.)
+                  </p>
+                  <div class="container">
+                  <table>
+                    <th></th>
+                    <th>NAME</th>
+                    <th>CITIZENSHIP</th>
+                    <th>MARITAL STATUS</th>
+                    <th>HIGHEST EDUCATIONAL ATTAINMENT</th>
+                    <th>PRESENT OCCUPATION</th>
+                    <th>MONTHLY INCOME<br>(In Phil. Peso)</th>
+
+                    <tr>
+                      <td>FATHER</td>
+                      <td> <input type="text" name="fname"> </td>
+                      <td> <input type="text" name="fcit"> </td>
+                      <td> <input type="text" name="fms"> </td>
+                      <td> <input type="text" name="fhea"> </td>
+                      <td> <input type="text" name="fpo"> </td>
+                      <td> <input type="text" name="fmi"> </td>
+                    </tr>
+
+                    <tr>
+                      <td>MOTHER</td>
+                      <td> <input type="text" name="mname"> </td>
+                      <td> <input type="text" name="mcit"> </td>
+                      <td> <input type="text" name="mms"> </td>
+                      <td> <input type="text" name="mhea"> </td>
+                      <td> <input type="text" name="mpo"> </td>
+                      <td> <input type="text" name="mmi"> </td>
+                    </tr>
+
+                    <tr>
+                      <td>LEGAL GUARDIAN</td>
+                      <td> <input type="text" name="lgname"> </td>
+                      <td> <input type="text" name="lgcit"> </td>
+                      <td> <input type="text" name="lgms"> </td>
+                      <td> <input type="text" name="lghea"> </td>
+                      <td> <input type="text" name="lgpo"> </td>
+                      <td> <input type="text" name="lgmi"> </td>
+                    </tr>
+                  </table>
+                  </div>
+                </div>
+          </div>
+          
+          <div class="centeraligntext">
+            <br><br>
+
+            <a href="#" class="button" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">SUBMIT</a>
+            </div>
+            <br><br>
+          </div>
+          
+
+          <section class="acform">
+            <div class="acform__content">
+                <div class="acform__login">
+        
+                    <div id="id02" class="modal">
+                    
+                    <form class="modal-content animate" action="/action_page.php" method="post">
+                        <div class="imgcontainer">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img src="images/urslogo.png" alt="Avatar" class="avatar">
+                        </div>
+        
+                        <div class="container">
+                          <h2>CONFIRMATION</h2>
+                        <label for="appnum">APPLICATION NUMBER:</label>
+                        <input type="text" placeholder="0000 0000 0000" name="appnum" required>
+                        <p><i>Note: Bring this document for verification</i><br><br>
+
+                        I certify that all information on this form are true and correct. I understand that any incorrect, false or misleading statement is punishable by law.</p>
+                            
+                        <a href="appformsample.html" class="button" type="submit" >I AGREE</a>
+                        
+                        <a href="admission.php" class="button" type="submit" >CLOSE</a>
+                        
+                        </div>
+        
+                    </form>
+                    </div>
+                </div>
+            </div>
+          </section>
+
+      </div>
+    </section>
+
+
+
+    <footer class="footer">
+      <div class="container">
+          <a class="footer__logo" href="#">
+              <img src="/images/urslogo.png"/><br>
+              URS Binangonan
+  
+            </a>
+            <div class="footer__social">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><title>Facebook</title><path fill="#FFF" d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z"/></svg>
+              </a>
+              <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18"><title>Twitter</title><path fill="#FFF" d="M20.667 2.797a8.192 8.192 0 01-2.357.646 4.11 4.11 0 001.804-2.27 8.22 8.22 0 01-2.606.996A4.096 4.096 0 0014.513.873c-2.649 0-4.595 2.472-3.997 5.038a11.648 11.648 0 01-8.457-4.287 4.109 4.109 0 001.27 5.478A4.086 4.086 0 011.47 6.59c-.045 1.901 1.317 3.68 3.29 4.075a4.113 4.113 0 01-1.853.07 4.106 4.106 0 003.834 2.85 8.25 8.25 0 01-6.075 1.7 11.616 11.616 0 006.29 1.843c7.618 0 11.922-6.434 11.662-12.205a8.354 8.354 0 002.048-2.124z"/></svg>
+              </a>
+              <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"><title>Instagram</title><path fill="#FFF" d="M10.333 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.976 1.409 4.1 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.058 4.042-.124 2.687-1.386 3.975-4.099 4.099-1.055.048-1.37.058-4.042.058-2.67 0-2.986-.01-4.04-.058-2.717-.124-3.976-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zm0-1.802C7.618 0 7.278.012 6.211.06 2.579.227.56 2.242.394 5.877.345 6.944.334 7.284.334 10s.011 3.057.06 4.123c.166 3.632 2.181 5.65 5.816 5.817 1.068.048 1.408.06 4.123.06 2.716 0 3.057-.012 4.124-.06 3.628-.167 5.651-2.182 5.816-5.817.049-1.066.06-1.407.06-4.123s-.011-3.056-.06-4.122C20.11 2.249 18.093.228 14.458.06 13.39.01 13.049 0 10.333 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.339-9.87a1.2 1.2 0 10-.001 2.4 1.2 1.2 0 000-2.4z"/></svg>
+              </a>
+            </div>
+        
+            <div class="footer__links col1">
+              <a href="#">About Us</a>
+              <a href="#">Contact</a>
+              <a href="#">Blog</a>
+            </div>
+        
+            <div class="footer__links col2">
+              <a href="#">Careers</a>
+              <a href="#">Support</a>
+              <a href="#">Privacy Policy</a>
+            </div>
+        
+            <div class="footer__cta">
+              <a href="#" class="button">Home</a>
+            </div>
+        
+            <div class="footer__copyright">
+              &copy; University. All Rights Reserved.
+            </div>
+  
+      </div>    
+    </footer>
+
+  <script src="/app/js/script.js"></script>
+
+
+</body>
+</html>

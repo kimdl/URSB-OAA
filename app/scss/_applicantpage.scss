@@ -1,0 +1,48 @@
+.applicant {
+    color: $darkBlue;
+    
+    .container{
+      @include breakpoint-up(medium){
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+    
+    &__forms{
+        
+        background-color: $white;
+        padding: 10px;
+        padding-bottom: 25px;
+        border: 1px solid black;
+        border-radius: 1px;
+    }
+
+    &__content{
+        margin-right: 40px;
+        margin-left: 40px;
+        margin: 00px;
+    }
+
+
+    &__statusbutton {
+        text-align: center;
+        button {
+            font-weight: 40px;
+            color: $white;
+            text-align: center;
+            transition: all 150ms ease-in-out;
+          
+          }
+
+          button:hover {
+            transform: scale(1.02);
+          }
+          select {
+              width: 180px;
+          }
+    }
+
+}
+
+
+  
